@@ -1,7 +1,0 @@
-{
-  "extends": ["tslint-config-standard", "tslint-react", "tslint-config-prettier"],
-  "rules": {
-    "trailing-comma": false
-  },
-  "defaultSeverity": "error"
-}

@@ -167,7 +167,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin({tslint: true, async: true}),
+    // new ForkTsCheckerWebpackPlugin({tslint: true, async: true}),
     // Generates an `index.html` file with the <script> injected.
     ...entries.map(({name, dirPath}) => ({name, dirPath, template: path.join(dirPath, 'index.html')}))
       .filter(({template}) => fs.existsSync(template))

@@ -41,11 +41,11 @@ class Comp extends React.Component<{}, any> {
     })
   }
 
-  _greet = () => {
-    browser.runtime.sendMessage({ type: 'GREETING' })
-      .then(response => alert(`Background Script: "${response}"`))
-      .catch(console.error)
-  }
+  // _greet = () => {
+  //   browser.runtime.sendMessage({ type: 'GREETING' })
+  //     .then(response => alert(`Background Script: "${response}"`))
+  //     .catch(console.error)
+  // }
   getBucketLinks = async (buckets: Buckets, bucketKey) => {
     try {
       const links = await buckets.listPath(bucketKey, '/thumbs')
@@ -138,7 +138,6 @@ class Comp extends React.Component<{}, any> {
     return (
       <div className='comp-a'>
         <h1 className='comp-a-title'>This is a shared component</h1>
-        <button onClick={this._greet}>Say Hi to Background Script!</button>
         {!this.state.isLoading && this.renderDropzone()}
         {this.state.photos.map((p, i) => <img key={i} src="/static/logo.svg" width="300"/>)}
       </div>

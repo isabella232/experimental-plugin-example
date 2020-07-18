@@ -115,7 +115,7 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx'],
+    extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.jsx'],
     alias: {
 
       // Support React Native Web
@@ -170,6 +170,11 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('ts-loader'),
           },
+          {
+            test: /\.mjs$/,
+            include: /node_modules/,
+            type: "javascript/auto",
+          },   
           // Process JS with Babel.
           {
             test: /\.jsx?$/,
@@ -205,7 +210,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin({tslint: true}),
+    // new ForkTsCheckerWebpackPlugin({tslint: true}),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: true,
