@@ -1,0 +1,77 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs",
+            "targets": {
+              "browsers": [
+                  "last 3 versions"
+              ]
+            }
+          }
+        ],
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        [
+          "@babel/plugin-proposal-object-rest-spread",
+          {
+            "useBuiltIns": true
+          }
+        ],
+        "babel-plugin-styled-components"
+      ]
+    },
+    "development": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "targets": {
+              "chrome": "55",
+              "firefox": "56"
+            }
+          }
+        ],
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        [
+          "@babel/plugin-proposal-object-rest-spread",
+          {
+            "useBuiltIns": true
+          }
+        ],
+        "babel-plugin-styled-components"
+      ]
+    },
+    "production": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "targets": {
+              "chrome": "55",
+              "firefox": "56"
+            }
+          }
+        ],
+        "@babel/preset-react",
+        "@babel/preset-typescript"
+      ],
+      "plugins": [
+        [
+          "@babel/plugin-proposal-object-rest-spread",
+          {
+            "useBuiltIns": true
+          }
+        ]
+      ]
+    }
+  }
+}
