@@ -16,7 +16,7 @@ choose the `manifest.json` that should now exist in `build/firefox/`.
 
 ### Chrome (untested)
 
-`npm run devff`
+`npm run devch`
 
 navigate to addons
 
