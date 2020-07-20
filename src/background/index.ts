@@ -7,8 +7,8 @@
 // })
 
 // Open the UI to navigate the collection images in a tab.
-// browser.browserAction.onClicked.addListener(() => {
-//   return new Promise(resolve =>
-//     browser.tabs.create({url: "/popup.html"}).then(resolve)
-//   )
-// });
+browser.browserAction.onClicked.addListener(() => {
+  return new Promise(resolve =>
+    browser.tabs.create({url: "/popup.html"}).then(resolve)
+  )
+});

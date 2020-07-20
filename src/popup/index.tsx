@@ -18,8 +18,8 @@ const Global = styled.div`
 
 ReactDOM.render(
   <Global>
-    <App />
     <CompA />
+    <App />
   </Global>,
   document.getElementById('root') as HTMLElement
 )

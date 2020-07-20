@@ -1,11 +1,11 @@
 {
-  "name": "Create React Typescript Sass Webextension",
-  "description": "Boilerplate for building webextension targeting Chrome & Firefox with react, typescript and sass",
+  "name": "Imbuck",
+  "description": "Demo extension built on Textile buckets",
 
   "icons": {
-    "16": "static/logo.png",
-    "48": "static/logo.png",
-    "128": "static/logo.png"
+    "16": "static/icon.png",
+    "48": "static/icon.png",
+    "128": "static/icon.png"
   },
 
   "permissions": ["notifications", "storage"],
@@ -25,8 +25,8 @@
 
   "browser_action": {
     "default_icon": {
-      "19": "static/logo.png",
-      "38": "static/logo.png"
+      "19": "static/icon.png",
+      "38": "static/icon.png"
     }
   },
 
